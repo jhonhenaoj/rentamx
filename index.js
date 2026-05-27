@@ -21,6 +21,7 @@ app.use(express.json());
 app.use("/api/auth",       authRoutes);
 app.use("/api/verify",     verifyRoutes);
 app.use("/api/properties", propertiesRoutes);
+app.use("/api/admin", require("./routes/admin"));
 
 // ── HEALTH CHECK ──────────────────────────────────────────────────────────────
 app.get("/health", async (req, res) => {
